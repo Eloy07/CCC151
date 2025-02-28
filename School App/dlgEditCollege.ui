@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgEditCollege</class>
+ <widget class="QDialog" name="dlgEditCollege">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>443</width>
+    <height>273</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>443</width>
+    <height>273</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>443</width>
+    <height>273</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Edit College</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #1b2023;
+color: rgb(195, 188, 194);</string>
+  </property>
+  <widget class="QLineEdit" name="inEditCollegeCode">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="inEditCollegeName">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnDlgEditCollege">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>210</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: gray;
+color: white;
+border: 2px solid rgb(65, 65, 65);
+border-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>Edit College</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bgEditCollege">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>421</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+border-radius: 10px;
+border: 2px solid #606364</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtEditCollegeCode">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+   </property>
+   <property name="text">
+    <string>Code</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtEditCollegeName">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+   </property>
+   <property name="text">
+    <string>College Name</string>
+   </property>
+  </widget>
+  <zorder>bgEditCollege</zorder>
+  <zorder>btnDlgEditCollege</zorder>
+  <zorder>txtEditCollegeCode</zorder>
+  <zorder>txtEditCollegeName</zorder>
+  <zorder>inEditCollegeName</zorder>
+  <zorder>inEditCollegeCode</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

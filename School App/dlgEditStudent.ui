@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgEditStudent</class>
+ <widget class="QDialog" name="dlgEditStudent">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>443</width>
+    <height>555</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>443</width>
+    <height>555</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>443</width>
+    <height>555</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Inter</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Edit Student</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #1b2023;
+color: rgb(195, 188, 194);</string>
+  </property>
+  <widget class="QLineEdit" name="inEditIDNumber">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="inEditFirstName">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="inEditLastName">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>220</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnDlgEditStudent">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>480</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: gray;
+color: white;
+border: 2px solid rgb(65, 65, 65);
+border-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>Edit Student</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bgEditStudent">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>421</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+border-radius: 10px;
+border: 2px solid #606364</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtEditIDNumber">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+   </property>
+   <property name="text">
+    <string>ID Number</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtEditFirstName">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+   </property>
+   <property name="text">
+    <string>First Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtEditLastName">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+   </property>
+   <property name="text">
+    <string>Last Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtEditYearLevel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>260</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+   </property>
+   <property name="text">
+    <string>Year Level</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtEditGender">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>340</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+   </property>
+   <property name="text">
+    <string>Gender</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtEditProgramCode">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Inter 18pt</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+   </property>
+   <property name="text">
+    <string>Program Code</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="inEditGender">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>380</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Male</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Female</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="inEditYearLevel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>300</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>1st Year</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2nd Year</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3rd Year</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4th Year</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="inEditProgramCode">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>450</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+   </property>
+  </widget>
+  <zorder>bgEditStudent</zorder>
+  <zorder>btnDlgEditStudent</zorder>
+  <zorder>txtEditIDNumber</zorder>
+  <zorder>txtEditFirstName</zorder>
+  <zorder>txtEditLastName</zorder>
+  <zorder>txtEditYearLevel</zorder>
+  <zorder>txtEditGender</zorder>
+  <zorder>txtEditProgramCode</zorder>
+  <zorder>inEditFirstName</zorder>
+  <zorder>inEditLastName</zorder>
+  <zorder>inEditIDNumber</zorder>
+  <zorder>inEditGender</zorder>
+  <zorder>inEditYearLevel</zorder>
+  <zorder>inEditProgramCode</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

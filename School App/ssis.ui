@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1146</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1146</width>
+    <height>768</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1146</width>
+    <height>768</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Inter</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Simple Student Information System</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">gridline-color: rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <widget class="QLabel" name="background">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-20</y>
+      <width>1146</width>
+      <height>768</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1146</width>
+      <height>768</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1146</width>
+      <height>768</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Inter</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #1b2023</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabs">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>1131</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(53, 58, 58);
+
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tabStudents">
+     <attribute name="title">
+      <string>Students</string>
+     </attribute>
+     <widget class="QLabel" name="txtSortStudentTbl">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>180</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);
+
+</string>
+      </property>
+      <property name="text">
+       <string>Sort by</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDeleteStudent">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>580</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(206, 12, 12);;
+color: white;
+border: 2px solid rgb(143, 22, 18);
+border-radius: 10px;
+</string>
+      </property>
+      <property name="text">
+       <string>Delete Student</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtSearchStudentTbl">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(195, 188, 194);
+background: #2a3133;</string>
+      </property>
+      <property name="text">
+       <string>Search by</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tblStudents">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>1081</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>ID Number</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Last Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>First Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Year Level</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Program Code</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QComboBox" name="inSort">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>180</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>ID Number</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>First Name</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Last Name</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Year Level</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Program Code</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="inSearchByStudentTbl">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>180</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>ID Number</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>First Name</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Last Name</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Year Level</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Program Code</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="btnEditStudent">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>580</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: gray;
+color: white;
+border: 2px solid rgb(65, 65, 65);
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string>Edit Student</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inSearchStudentTbl">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>180</y>
+        <width>391</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAddStudent">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>80</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(50, 123, 44);
+color: white;
+border: 2px solid rgb(14, 80, 45);
+border-radius: 10px;
+
+</string>
+      </property>
+      <property name="text">
+       <string>Add Student</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bgAddStudents">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1101</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+border-radius: 10px;
+border: 2px solid #606364
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bgStudentTbl">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>1101</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+border-radius: 10px;
+border: 2px solid #606364</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inGender">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>70</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Male</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Female</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="txtProgramCode">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>30</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string>Program Code</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inLastName">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>70</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtFirstName">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>30</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string>First Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtYearLevel">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>30</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);
+</string>
+      </property>
+      <property name="text">
+       <string>Year Level</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inFirstName">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>30</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inProgramCode">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>31</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtGender">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>70</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);
+</string>
+      </property>
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inYearLevel">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>30</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>1st Year</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2nd Year</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3rd Year</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4th Year</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="txtLastName">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>70</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);
+</string>
+      </property>
+      <property name="text">
+       <string>Last Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtIDNum">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string>ID Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inIDNum">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>70</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>bgStudentTbl</zorder>
+     <zorder>bgAddStudents</zorder>
+     <zorder>txtSortStudentTbl</zorder>
+     <zorder>txtSearchStudentTbl</zorder>
+     <zorder>tblStudents</zorder>
+     <zorder>inSort</zorder>
+     <zorder>inSearchByStudentTbl</zorder>
+     <zorder>btnEditStudent</zorder>
+     <zorder>inSearchStudentTbl</zorder>
+     <zorder>btnDeleteStudent</zorder>
+     <zorder>btnAddStudent</zorder>
+     <zorder>inGender</zorder>
+     <zorder>txtProgramCode</zorder>
+     <zorder>inLastName</zorder>
+     <zorder>txtFirstName</zorder>
+     <zorder>txtYearLevel</zorder>
+     <zorder>inFirstName</zorder>
+     <zorder>inProgramCode</zorder>
+     <zorder>txtGender</zorder>
+     <zorder>inYearLevel</zorder>
+     <zorder>txtLastName</zorder>
+     <zorder>txtIDNum</zorder>
+     <zorder>inIDNum</zorder>
+    </widget>
+    <widget class="QWidget" name="tabProgram">
+     <attribute name="title">
+      <string>Program</string>
+     </attribute>
+     <widget class="QLabel" name="bgAddProgram">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1101</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+border-radius: 10px;
+border: 2px solid #606364</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inPrgoramCode">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>30</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtProgramName">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string>Program Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inProgramName">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>80</y>
+        <width>461</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtProgramCode_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string>Program Code</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtCollegeCode_2">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>30</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string>College Code</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inCollegeCodePrg">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>30</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAddProgram">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>80</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(50, 123, 44);
+color: white;
+border: 2px solid rgb(14, 80, 45);
+border-radius: 10px;
+
+</string>
+      </property>
+      <property name="text">
+       <string>Add Program</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tblProgram">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>1081</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>Program Code</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Program Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>College Code</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="bgProgramTbl">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>1101</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+border-radius: 10px;
+border: 2px solid #606364</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnEditProgram">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>580</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: gray;
+color: white;
+border: 2px solid rgb(65, 65, 65);
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string>Edit Program</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDeleteProgram">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>580</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(206, 12, 12);;
+color: white;
+border: 2px solid rgb(143, 22, 18);
+border-radius: 10px;
+</string>
+      </property>
+      <property name="text">
+       <string>Delete Program</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtSearchProgramTbl">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(195, 188, 194);
+background: #2a3133;</string>
+      </property>
+      <property name="text">
+       <string>Search by</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inSearchByProgramTbl">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>180</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Program Code</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Program Name</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>College Code</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="inSearchProgramTbl">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>180</y>
+        <width>391</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtSortProgramTbl">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>180</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);
+
+</string>
+      </property>
+      <property name="text">
+       <string>Sort by</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="inSortProgramTbl">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>180</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Program Code</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Program Name</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>College Code</string>
+       </property>
+      </item>
+     </widget>
+     <zorder>bgProgramTbl</zorder>
+     <zorder>bgAddProgram</zorder>
+     <zorder>inPrgoramCode</zorder>
+     <zorder>txtProgramName</zorder>
+     <zorder>inProgramName</zorder>
+     <zorder>txtProgramCode_2</zorder>
+     <zorder>txtCollegeCode_2</zorder>
+     <zorder>inCollegeCodePrg</zorder>
+     <zorder>btnAddProgram</zorder>
+     <zorder>tblProgram</zorder>
+     <zorder>btnEditProgram</zorder>
+     <zorder>btnDeleteProgram</zorder>
+     <zorder>txtSearchProgramTbl</zorder>
+     <zorder>inSearchByProgramTbl</zorder>
+     <zorder>inSearchProgramTbl</zorder>
+     <zorder>txtSortProgramTbl</zorder>
+     <zorder>inSortProgramTbl</zorder>
+    </widget>
+    <widget class="QWidget" name="tabCollege">
+     <attribute name="title">
+      <string>College</string>
+     </attribute>
+     <widget class="QLabel" name="bgAddCollege">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1101</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+border-radius: 10px;
+border: 2px solid #606364</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtCollegeCode">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string>College Code</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inCollegeCode">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>30</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtCollegeName">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+color: rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string>College Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="inCollegeName">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>80</y>
+        <width>461</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAddStudent_2">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>80</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(50, 123, 44);
+color: white;
+border: 2px solid rgb(14, 80, 45);
+border-radius: 10px;
+
+</string>
+      </property>
+      <property name="text">
+       <string>Add College</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bgCollegeTbl">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>1101</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #2a3133;
+border-radius: 10px;
+border: 2px solid #606364</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnEditCollege">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>580</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: gray;
+color: white;
+border: 2px solid rgb(65, 65, 65);
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string>Edit College</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnDeleteCollege">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>580</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(206, 12, 12);;
+color: white;
+border: 2px solid rgb(143, 22, 18);
+border-radius: 10px;
+</string>
+      </property>
+      <property name="text">
+       <string>Delete College</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tblCollege">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>1081</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>College Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Code</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLineEdit" name="inSearchCollegeTbl">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>180</y>
+        <width>391</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;
+color: black;
+border: 2px solid rgb(195, 188, 194);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="txtSearchCollegeTbl">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter 18pt</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(195, 188, 194);
+background: #2a3133;</string>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>20</y>
+      <width>901</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>JetBrains Mono</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #c3bcc2;</string>
+    </property>
+    <property name="text">
+     <string>STUDENT INFORMATION SYSTEM</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1146</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOpen_Students_csv">
+    <property name="title">
+     <string>Open Students csv</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOpen_Program_csv">
+    <property name="title">
+     <string>Open Program csv</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuOpen_College_csv">
+    <property name="title">
+     <string>Open College csv</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuOpen_Students_csv"/>
+   <addaction name="menuOpen_Program_csv"/>
+   <addaction name="menuOpen_College_csv"/>
+  </widget>
+  <action name="actionOpen_CSV_file">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_to_CSV_files">
+   <property name="text">
+    <string>Open Student CSV </string>
+   </property>
+  </action>
+  <action name="actionOpen_Program_CSV">
+   <property name="text">
+    <string>Open Program CSV</string>
+   </property>
+  </action>
+  <action name="actionOpen_College_CSV">
+   <property name="text">
+    <string>Open College CSV</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
